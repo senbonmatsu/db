@@ -31,8 +31,8 @@ class Task(db.Model):
     category = db.Column(db.String(128),nullable=False)
     task = db.Column(db.String(128),nullable=False)
     role = db.Column(db.String(128),nullable=False)
-    start_date=db.Column(db.Date)
-    final_date=db.Column(db.Date)
+    start_date=db.Column(db.Timestamp)
+    final_date=db.Column(db.Timestamp)
     
     def __repr__(self):
         return "<Task %r>" % self.id
